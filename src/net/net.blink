@@ -1,0 +1,14 @@
+option ClientOutput = "output/NetworkRequest.luau"
+option ServerOutput = "output/NetworkResponse.luau"
+
+event ClientReady {
+    From: Client,
+    Type: Reliable,
+    Call: ManyAsync
+}
+
+event BaseAssigned {
+    From: Server,
+    Type: Reliable,
+    Call: ManyAsync
+}

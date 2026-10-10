@@ -1,0 +1,157 @@
+{
+	"globIgnorePaths": [
+		"**/_drafts/**"
+	],
+	"name": "kar_wash",
+	"tree": {
+		"$className": "DataModel",
+		"Lighting": {},
+		"ReplicatedFirst": {},
+		"ReplicatedStorage": {
+			"Packages": {
+				"$path": "Packages"
+			},
+			"shared": {
+				"$className": "Folder",
+				"$ignoreUnknownInstances": false,
+				"feature": {
+					"$className": "Folder",
+					"$ignoreUnknownInstances": false,
+					"app": {
+						"$className": "Folder",
+						"$ignoreUnknownInstances": false,
+						"ui": {
+							"$className": "Folder",
+							"$ignoreUnknownInstances": false,
+							"RootUI": {
+								"$path": {
+									"optional": "src/feature/app/ui/RootUI.luau"
+								}
+							},
+							"root.story": {
+								"$path": {
+									"optional": "src/feature/app/ui/root.story.luau"
+								}
+							}
+						}
+					},
+					"plot": {
+						"$className": "Folder",
+						"$ignoreUnknownInstances": false,
+						"classes": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/plot/classes"
+							}
+						},
+						"modules": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/plot/modules"
+							}
+						}
+					}
+				},
+				"game": {
+					"$className": "Folder",
+					"$ignoreUnknownInstances": false,
+					"DataTemplate": {
+						"$path": {
+							"optional": "src/game/DataTemplate.luau"
+						}
+					},
+					"assets": {
+						"$ignoreUnknownInstances": false,
+						"$path": {
+							"optional": "src/game/assets"
+						}
+					}
+				},
+				"net": {
+					"$className": "Folder",
+					"$ignoreUnknownInstances": false,
+					"output": {
+						"$ignoreUnknownInstances": false,
+						"$path": {
+							"optional": "src/net/output"
+						}
+					}
+				}
+			}
+		},
+		"RobloxPluginGuiService": {},
+		"ServerScriptService": {
+			"server": {
+				"$className": "Folder",
+				"$ignoreUnknownInstances": false,
+				"Server": {
+					"$path": {
+						"optional": "src/(startup)/Server.server.luau"
+					}
+				},
+				"core": {
+					"$ignoreUnknownInstances": false,
+					"$path": {
+						"optional": "src/core/server"
+					}
+				},
+				"feature": {
+					"$className": "Folder",
+					"$ignoreUnknownInstances": false,
+					"plot": {
+						"$className": "Folder",
+						"$ignoreUnknownInstances": false,
+						"PlotService": {
+							"$path": {
+								"optional": "src/feature/plot/PlotServiceServer.luau"
+							}
+						}
+					}
+				}
+			}
+		},
+		"ServerStorage": {},
+		"SoundService": {},
+		"StarterGui": {},
+		"StarterPack": {},
+		"StarterPlayer": {
+			"StarterCharacterScripts": {},
+			"StarterPlayerScripts": {
+				"client": {
+					"$className": "Folder",
+					"$ignoreUnknownInstances": false,
+					"Client": {
+						"$path": {
+							"optional": "src/(startup)/Client.client.luau"
+						}
+					},
+					"MountUI": {
+						"$path": {
+							"optional": "src/(startup)/client/MountUI.luau"
+						}
+					},
+					"core": {
+						"$ignoreUnknownInstances": false,
+						"$path": {
+							"optional": "src/core/client"
+						}
+					},
+					"feature": {
+						"$className": "Folder",
+						"$ignoreUnknownInstances": false,
+						"plot": {
+							"$className": "Folder",
+							"$ignoreUnknownInstances": false,
+							"PlotService": {
+								"$path": {
+									"optional": "src/feature/plot/PlotServiceClient.luau"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"Workspace": {}
+	}
+}
