@@ -22,11 +22,19 @@ function PlotService:PlayerAdded(player: Player)
 		return
 	end
 
-	local plot = Plot.New(player)
-	plot:SpawnPlayer()
-	plots[player] = plot
+	local success, result = pcall(Plot.New, player)
+	if not success then
+		warn(`[PlotService] Failed to create plot for {player.Name}: {result}`)
+		player:Kick("No plot available. Please rejoin in a moment.")
+		return
+	end
 
+	local plot = result :: Plot.Plot
+
+	plots[player] = plot
 	PlayerState.SetPath(player, "session.plotId", plot.Id)
+
+	plot:SpawnPlayer()
 end
 
 function PlotService:PlayerRemoving(player: Player)
@@ -36,8 +44,8 @@ function PlotService:PlayerRemoving(player: Player)
 		return
 	end
 
-	plot:Destroy()
 	plots[player] = nil
+	plot:Destroy()
 
 	PlayerState.SetPath(player, "session.plotId", nil)
 end

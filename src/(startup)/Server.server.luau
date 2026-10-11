@@ -3,11 +3,13 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 local PlayerState = require(ServerScriptService.server.core.PlayerState)
 local PlotService = require(ServerScriptService.server.feature.plot.PlotService)
+local CustomerService = require(ServerScriptService.server.feature.customer.CustomerService)
 
 local initializing: {[Player]: boolean} = {}
 local initialized: {[Player]: boolean} = {}
 
 PlotService:Init()
+CustomerService:Init()
 
 local function OnPlayerAdded(player: Player)
 	if initializing[player] or initialized[player] then

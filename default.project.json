@@ -35,6 +35,40 @@
 							}
 						}
 					},
+					"customer": {
+						"$className": "Folder",
+						"$ignoreUnknownInstances": false,
+						"behaviors": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/customer/behaviors"
+							}
+						},
+						"customers": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/customer/customers"
+							}
+						},
+						"factory": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/customer/factory"
+							}
+						},
+						"modules": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/customer/modules"
+							}
+						},
+						"types": {
+							"$ignoreUnknownInstances": false,
+							"$path": {
+								"optional": "src/feature/customer/types"
+							}
+						}
+					},
 					"plot": {
 						"$className": "Folder",
 						"$ignoreUnknownInstances": false,
@@ -98,6 +132,24 @@
 				"feature": {
 					"$className": "Folder",
 					"$ignoreUnknownInstances": false,
+					"customer": {
+						"$className": "Folder",
+						"$ignoreUnknownInstances": false,
+						"CustomerService": {
+							"$path": {
+								"optional": "src/feature/customer/CustomerServiceServer.luau"
+							}
+						},
+						"classes": {
+							"$className": "Folder",
+							"$ignoreUnknownInstances": false,
+							"CustomerController": {
+								"$path": {
+									"optional": "src/feature/customer/classes/CustomerControllerServer.luau"
+								}
+							}
+						}
+					},
 					"plot": {
 						"$className": "Folder",
 						"$ignoreUnknownInstances": false,
